@@ -1,25 +1,31 @@
 <template>
   <header class="header">
     <div class="header__logo">
-      <a href="index.html" class="logo">
+      <router-link :to="{ name: 'home' }" class="logo">
         <img
           src="@/assets/img/logo.svg"
           alt="V!U!E! Pizza logo"
           width="90"
           height="40"
         />
-      </a>
+      </router-link>
     </div>
     <div class="header__cart">
-      <a href="cart.html">0 ₽</a>
+      <router-link :to="{ name: 'cart' }"> ₽</router-link>
     </div>
     <div class="header__user">
-      <a href="#" class="header__login"><span>Войти</span></a>
+      <router-link :to="{ name: 'login' }" class="header__login"
+        ><span>Войти</span></router-link
+      >
     </div>
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+// import { useCartStore } from "../stores";
+
+// const cartStore = useCartStore();
+</script>
 
 <style lang="scss" scoped>
 @import "@/assets/scss/app.scss";
